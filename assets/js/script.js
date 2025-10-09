@@ -15,3 +15,10 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer){
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
+
+const toggleButton = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+toggleButton.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
