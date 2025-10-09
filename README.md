@@ -1,2 +1,3 @@
 # finzee
-Resume website, place to host project.
+Resume website, https://nicvelarde.github.io/finzee/
+place to host project.
