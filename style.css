@@ -12,6 +12,10 @@ body {
   background: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 900px;
   margin: auto;
@@ -159,4 +163,16 @@ footer {
   text-align: center;
   padding: 15px;
   font-size: 0.9em;
+}
+
+/* ===== Fade-In Animation ==== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, tranfrom 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
