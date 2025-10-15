@@ -22,3 +22,7 @@ const navLinks = document.getElementById('nav-links');
 toggleButton.addEventListener('click', () => {
   navLinks.classList.toggle('show');
 });
+
+document.getElementById('menu-toggle').addEventListener('click', function () {
+  document.getElementById('nav-links').classList.toggle('show');
+});
