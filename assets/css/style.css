@@ -10,7 +10,6 @@ body {
   margin: 0;
   color: var(--dark-color);
   background: white;
-  
 }
 
 html {
@@ -172,7 +171,7 @@ footer {
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.8s ease-out, tranfrom 0.8s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .fade-in.visible {
