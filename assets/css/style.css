@@ -13,6 +13,8 @@ body {
 }
 
 html {
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
 }
 
@@ -184,9 +186,10 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
+  width: 98%;
 }
 
 .logo {
