@@ -18,6 +18,7 @@ body {
   padding: 0 20px;
 }
 
+/* Header */
 header {
   background: var(--primary-color);
   color: white;
@@ -29,20 +30,23 @@ header h1 { font-size: 2.5em; margin-bottom: 0.2em; }
 header h2 { font-weight: 400; margin-bottom: 0.5em; }
 header .contact-line { font-weight: 400; font-size: 0.9em; }
 
+/* Sections */
 section { padding: 40px 0; }
 section h3 { font-size: 1.5em; border-bottom: 3px solid var(--primary-color); display: inline-block; margin-bottom: 15px; }
-.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s, transform 0.8s; }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
 
+/* Skills */
 .skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
 .skill-grid li { background: var(--light-color); padding: 8px; border-radius: 5px; font-weight: 500; list-style: none; text-align: center; }
 
+/* Jobs */
 .job { margin-bottom: 20px; }
 .job h4 { margin-bottom: 5px; }
 .job p em { font-style: italic; color: #666; }
 .job ul { margin-left: 20px; }
 
+/* Download button */
 .download-btn {
+  display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
   background-color: #0077cc;
@@ -50,33 +54,23 @@ section h3 { font-size: 1.5em; border-bottom: 3px solid var(--primary-color); di
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s;
 }
 .download-btn:hover { background-color: #005fa3; }
 
+/* Navbar */
 .navbar { width: 100%; background-color: #333; position: fixed; top: 0; z-index: 100; padding: 15px 0; }
 .navbar .container { display: flex; justify-content: space-between; align-items: center; }
 .nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
 .nav-links a { color: white; text-decoration: none; }
 .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
 
-@media print {
-  body { background: #fff; color: #000; }
-  .navbar, .download-btn, footer { display: none !important; }
-  #resume-content {
-    width: 7.5in;
-    max-width: 7.5in;
-    margin: 0 auto;
-    padding: 0.5in;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 11pt;
-    color: #000;
-  }
-  h1 { font-size: 20pt; margin-bottom: 0.1in; }
-  h2 { font-size: 14pt; margin-bottom: 0.2in; }
-  h3 { font-size: 12pt; margin-top: 0.25in; border: none; }
-  h4 { font-size: 11pt; margin-bottom: 0.05in; }
-  p, li { font-size: 10pt; line-height: 1.3; margin-bottom: 0.05in; }
-  ul { padding-left: 1em; }
-  section { page-break-inside: avoid; }
+/* Mobile menu */
+@media (max-width: 768px) {
+  .nav-links { display: none; flex-direction: column; background-color: #333; position: absolute; top: 100%; left: 0; right: 0; width: 100%; padding: 10px 0; text-align: center; }
+  .nav-links.show { display: flex; }
+  .menu-toggle { display: block; }
 }
 
