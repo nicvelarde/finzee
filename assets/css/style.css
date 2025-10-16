@@ -82,6 +82,22 @@ section h3 {
   font-weight: 300;
 }
 
+.download-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #005fa3;
+}
+
 /* ===== Skills ===== */
 .skills-grid {
   display: grid;
@@ -254,4 +270,14 @@ footer {
   .menu-toggle {
     display: block;
   }
+}
+
+@media print {
+    .navbar,
+    .download-btn {
+        display: none;
+    }
+    .fade-in {
+        opacity: 1; /* make sure content is fully visible */
+    }
 }
