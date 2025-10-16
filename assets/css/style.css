@@ -306,3 +306,8 @@ footer {
     /* Optional: force page breaks */
     #experience, #education { page-break-before: always; }
 }
+
+#resume-content {
+  overflow: visible !important;
+  max-height: none !important;
+}

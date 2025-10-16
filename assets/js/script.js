@@ -30,15 +30,34 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.getElementById("downloadBtn").addEventListener("click", () => {
+    // Disable fade-in
+    document.querySelectorAll('.fade-in').forEach(el => el.style.opacity = 1);
+
     const resume = document.getElementById("resume-content");
 
+    // Temporarily ensure the section is fully visible before renderint
+    resume.style.maxHeight = "none";
+    resume.style.overflow = "visable";
+
     const options = {
-        margin: 0.3,
+        margin: [0.3, 0.3, 0.3, 0.3],
         filename: 'Nicholas_Velarde_Resume.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
+        image: { type: 'jpeg', quality: 1 },
+        html2canvas: { scale: 2,
+                       useCORS: true,
+                       scrollY: 0,
+                       windowWidth: document.body.scrollHeight,
+                       windowHeight: document.body.scrollHeight 
+         },
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
     };
 
-    html2pdf().set(options).from(resume).save();
+    html2pdf()
+      .set(options)
+      .from(resume)
+      .save()
+      .then(() => {
+        resume.style.overflow = "";
+        resume.style.maxHeight = "";
+      });
 });
