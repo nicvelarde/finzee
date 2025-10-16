@@ -82,20 +82,21 @@ section h3 {
   font-weight: 300;
 }
 
+/* ===== Download Button ===== */
 .download-btn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #0077cc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
 }
 
 .download-btn:hover {
-    background-color: #005fa3;
+  background-color: #005fa3;
 }
 
 /* ===== Skills ===== */
@@ -259,7 +260,6 @@ footer {
     right: 0;
     width: 100%;
     padding: 10px 0;
-
     text-align: center;
   }
 
@@ -272,49 +272,118 @@ footer {
   }
 }
 
-
-/* Print-friendly styling */
+/* =======================
+   PRINT-FRIENDLY RESUME
+   ======================= */
 @media print {
-    .navbar,
-    .download-btn,
-    footer {
-        display: none;
-    }
 
-    #resume-content {
-        width: 100%;
-        max-width: 8.5in;
-        margin: 0 auto;
-        padding: 0.5in;
-        font-family: "Helvetica", "Arial", sans-serif;
-        font-size: 11pt;
-        color: #000;
-        background: #fff;
-    }
+  /* Hide unnecessary UI */
+  .navbar,
+  .download-btn,
+  footer {
+    display: none !important;
+  }
 
-    h1 { font-size: 22pt; margin-bottom: 0.1in; }
-    h2 { font-size: 16pt; margin-bottom: 0.2in; }
-    h3 { font-size: 14pt; margin-top: 0.3in; margin-bottom: 0.1in; }
-    h4 { font-size: 12pt; margin-bottom: 0.05in; }
+  /* Resume body setup */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 11pt;
+    margin: 0;
+    padding: 0;
+  }
 
-    p, li { line-height: 1.3; margin-bottom: 0.05in; font-size: 11pt; }
-    ul { padding-left: 1.2em; }
+  /* Keep everything centered on page */
+  #resume-content,
+  body > * {
+    width: 7.5in !important;
+    margin: 0 auto !important;
+    padding: 0.5in 0.75in !important;
+    box-sizing: border-box;
+    background: #fff !important;
+  }
 
-    .fade-in { opacity: 1 !important; animation: none !important; }
-    section { page-break-inside: avoid; }
+  /* Simplify spacing and colors */
+  header {
+    background: none !important;
+    color: #000 !important;
+    text-align: center;
+    padding: 0;
+    border-bottom: 2px solid #000;
+    margin-bottom: 0.3in;
+  }
 
-    /* Optional: force page breaks */
-    #experience, #education { page-break-before: always; }
+  header h1 {
+    font-size: 18pt;
+    margin: 0;
+  }
+
+  header h2 {
+    font-size: 12pt;
+    font-weight: 400;
+    margin: 4px 0 0;
+  }
+
+  section {
+    padding: 0;
+    margin-bottom: 0.35in;
+    page-break-inside: avoid;
+  }
+
+  h3 {
+    font-size: 12pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+    margin-bottom: 0.15in;
+  }
+
+  h4 {
+    font-size: 11pt;
+    margin-bottom: 0.05in;
+  }
+
+  p, li {
+    font-size: 10.5pt;
+    line-height: 1.4;
+    margin: 0 0 4px;
+  }
+
+  ul {
+    margin: 0 0 0.15in 1.2em;
+    padding: 0;
+  }
+
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Page control */
+  #experience, #education {
+    page-break-before: auto;
+  }
+
+  /* Remove background colors from skills or projects */
+  .skill {
+    background: none !important;
+    border: none !important;
+    text-align: left;
+    padding: 0;
+  }
 }
 
+/* Keep resume visible when generating PDF */
 #resume-content {
-    overflow: visible !important;
-    position: relative !important;
-    max-height: none !important;
-    display: block !important;
+  overflow: visible !important;
+  position: relative !important;
+  max-height: none !important;
+  display: block !important;
 }
 
 body, html {
-    overflow: visible;
-    height: auto;
+  overflow: visible;
+  height: auto;
 }

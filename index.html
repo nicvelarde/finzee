@@ -1,151 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>FinZee</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <body>
-        <!-- navbar Section-->
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">Nicholas Velarde</div>
-                <button class="menu-toggle" id="menu-toggle">☰</button>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nicholas Velarde - Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">Nicholas Velarde</div>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
 
-        <!-- Header Section-->
-    <div id="resume-content">
-        <header id="header">
-            <div class="container">
-                <h1>Nicholas Velarde</h1>
-                <h2>Data Analysis / QA Tester</h2>
-            </div>
-        </header>
+    <!-- Resume Content (this is what gets exported to PDF) -->
+    <main id="resume-content">
+      <!-- Header -->
+      <header id="header">
+        <div class="container header-container">
+          <h1>Nicholas Velarde</h1>
+          <h2>Data Analyst / QA Tester</h2>
+          <p class="contact-line">
+            <a href="mailto:velarde_nicholas@yahoo.com">velarde_nicholas@yahoo.com</a> |
+            <a href="https://linkedin.com/in/nicholasvelarde" target="_blank">LinkedIn</a>
+          </p>
+        </div>
+      </header>
 
-        <!-- About Section -->
-        <section id="about" class="fade-in">
-            <div class="container">
-                <h3>About</h3>
-                <p>Versatile and technically skilled professional with a strong background in QA testing, IT systems support, data analysis, and customer service. Experienced in troubleshooting hardware/software issues across PC and gaming platforms, supporting large-scale data systems, and providing user-centered solutions. Quick to learn new tools and systems, with a proven ability to work cross-functionally in high-paced environments — from tech to retail to public service.</p>
-                <button id="downloadBtn" class="download-btn">Download Printable Resume</button>
-            </div>
-        </section>
+      <!-- About -->
+      <section id="about" class="fade-in">
+        <div class="container">
+          <h3>Profile</h3>
+          <p>
+            Versatile and technically skilled professional with a strong background in QA testing, IT systems support, and data analysis.
+            Experienced in troubleshooting hardware/software issues, supporting large-scale data systems, and providing user-centered solutions.
+            Quick to learn new tools and systems, with a proven ability to collaborate cross-functionally in high-paced environments.
+          </p>
+          <button id="downloadBtn" class="download-btn">Download Printable Resume</button>
+        </div>
+      </section>
 
-        <!--Skill Section-->
-        <section id="skills" class="fade-in">
-            <div class="container">
-                <h3>Skills</h3>
-                <div class="skill-grid">
-                    <div class="skill">HTML, CSS, Javascript</div>
-                    <div class="skill">Git & GitHub</div>
-                    <div class="skill">QA Testing(Jira, Helix)</div>
-                    <div class="skill">SQL, Python, Excel, AWS</div>
-                    <div class="skill">Microsoft Office(Word, Excel, Outlook)</div>
-                    <div class="skill">Data Analysis, & Reporting Automation</div>
-                    <div class="skill">Test Case Execution & Bug Regression</div>
-                    <div class="skill">Documentation & Technical Support</div>
-                </div>
-            </div>
-        </section>
+      <!-- Skills -->
+      <section id="skills" class="fade-in">
+        <div class="container">
+          <h3>Technical Skills</h3>
+          <ul class="skill-grid">
+            <li>HTML, CSS, JavaScript</li>
+            <li>Git & GitHub</li>
+            <li>QA Testing (Jira, Helix)</li>
+            <li>SQL, Python, Excel, AWS</li>
+            <li>Microsoft Office Suite</li>
+            <li>Data Analysis & Reporting Automation</li>
+            <li>Test Case Execution & Bug Regression</li>
+            <li>Documentation & Technical Support</li>
+          </ul>
+        </div>
+      </section>
 
-        <!--Experience Section-->
-        <section id="experience" class="fade-in">
-            <div class="container">
-                <h3>Work Experience</h3>
-                <div class="job">
-                    <h4>QA Tester - 2K Vegas</h4>
-                    <p><em>April 2024 - August 2024</em></p>
-                    <ul>
-                        <li>Logged, tracked, and verified bugs using Jira and Helix across multiple test cycles.</li>
-                        <li>Followed structured test plans and submitted clear, reproducible bug reports.</li>
-                        <li>Flagged critical issues and collaborated with dev teams to resolve them efficiently.</li>
-                        <li>Regressed fixed bugs and assessed the playability of titles on various platforms.</li>
-                        <li>Gained strong working knowledge of 2K products and QA practices.</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h4>Data Analysis, Strategy & Operations - Groundtruth</h4>
-                    <p><em>June 2015 - December 2023</em></p>
-                    <ul>
-                        <li>Queried large datasets using SQL and AWS Athena to support ad delivery and campaign reporting.</li>
-                        <li>Automated reporting workflows using Python, significantly reducing manual effort.</li>
-                        <li>Partnered with Campaign Managers to analyze performance and optimize strategy.</li>
-                        <li>Generated Excel and Python-based reports to communicate results and insights.</li>
-                        <li>Handled ad hoc data requests and developed scalable solutions for recurring tasks.</li>
-                        <li>Worked cross-functionally with internal stakeholders and external vendors.</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h4>System Technician I, Clark County IT Department</h4>
-                    <p><em>April 2014 - April 2015</em></p>
-                    <ul>
-                        <li>Designed, installed, tested, and maintained local area network (LAN) systems and PCs.</li>
-                        <li>Troubleshot and resolved hardware/software issues to ensure minimal downtime during operations.</li>
-                        <li>Assisted internal users in determining hardware/software needs and implemented solutions.</li>
-                        <li>Documented system installations, configurations, and resolutions for internal records.</li>
-                        <li>Provided reliable IT support during critical election operations.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+      <!-- Experience -->
+      <section id="experience" class="fade-in">
+        <div class="container">
+          <h3>Professional Experience</h3>
 
-        <!--Education Section-->
-        <section id="education" class="fade-in">
-            <div class="container">
-                <h3>Education</h3>
-                <div class="education-list">
-                    <h4>ITT Technical Institute, Henderson, NV</h4>
-                    <ul>
-                        <li>Bachelor of Applied Science (Digital Entertainment and Game Design)</li>
-                        <li>Associate of Applied Science (Multimedia)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+          <div class="job">
+            <h4>QA Tester — 2K Vegas</h4>
+            <p><em>April 2024 – August 2024</em></p>
+            <ul>
+              <li>Logged, tracked, and verified bugs using Jira and Helix across multiple test cycles.</li>
+              <li>Followed structured test plans and submitted clear, reproducible bug reports.</li>
+              <li>Collaborated with dev teams to resolve critical issues efficiently.</li>
+              <li>Regressed fixed bugs and assessed playability across multiple platforms.</li>
+            </ul>
+          </div>
 
-        <!--Project Section-->
-        <section id="projects" class="fade-in">
-            <div class="container">
-                <h3>Projects</h3>
-                    <div class="project">
-                        <!-- <h4><a href="https://initiative-tracker-2b22d.web.app/">Initiative Tracker</a></h4> -->
-                        <h4>Initiative Tracker</a></h4>
-                        <p>(Under Construction) Allows Game Master and Players input and track their initiative.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+          <div class="job">
+            <h4>Data Analysis, Strategy & Operations — Groundtruth</h4>
+            <p><em>June 2015 – December 2023</em></p>
+            <ul>
+              <li>Queried large datasets using SQL and AWS Athena to support campaign reporting.</li>
+              <li>Automated workflows using Python, reducing manual effort.</li>
+              <li>Partnered with Campaign Managers to analyze performance and optimize strategy.</li>
+              <li>Generated reports in Excel and Python to communicate insights.</li>
+            </ul>
+          </div>
 
-        <!--Contact Section-->
-        <section id="contact" class="fade-in">
-            <div class="container">
-                <h3>Contact</h3>
-                <p>Interested in working together or have a question?</p>
-                <p>Email me at <a href="mailto:velarde_nicholas@yahoo.com">velarde_nicholas@yahoo.com</a></p>
-                <div class="socials">
-                    <a href="https://linkedin.com/in/nicholasvelarde" target="_blank">LinkedIn</a>
-                </div>
-            </div>
-        </section>
-    </div>
+          <div class="job">
+            <h4>System Technician I — Clark County IT Department</h4>
+            <p><em>April 2014 – April 2015</em></p>
+            <ul>
+              <li>Installed and maintained LAN systems and PCs for internal departments.</li>
+              <li>Troubleshot hardware/software issues to minimize downtime.</li>
+              <li>Documented configurations and provided IT support during elections.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <!--Footer Section-->
-        <footer>
-            <p>© 2025 Nicholas Velarde</p>
-        </footer>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-        <script src="assets/js/script.js"></script>
-    </body>
+      <!-- Education -->
+      <section id="education" class="fade-in">
+        <div class="container">
+          <h3>Education</h3>
+          <p><strong>ITT Technical Institute</strong> — Henderson, NV</p>
+          <ul>
+            <li>Bachelor of Applied Science, Digital Entertainment and Game Design</li>
+            <li>Associate of Applied Science, Multimedia</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="fade-in">
+        <div class="container">
+          <h3>Projects</h3>
+          <div class="project">
+            <h4>Initiative Tracker</h4>
+            <p>(Under Construction) A web app allowing game masters and players to input and track initiative order during D&D sessions.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Nicholas Velarde</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
