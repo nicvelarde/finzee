@@ -12,77 +12,36 @@ body {
   background: white;
 }
 
-html {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
-
 .container {
   max-width: 900px;
   margin: auto;
   padding: 0 20px;
 }
 
-/* ===== Header ===== */
 header {
   background: var(--primary-color);
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
 }
 
-header h1 {
-  font-size: 2.8em;
-  margin-bottom: 0.2em;
-}
+header h1 { font-size: 2.5em; margin-bottom: 0.2em; }
+header h2 { font-weight: 400; margin-bottom: 0.5em; }
+header .contact-line { font-weight: 400; font-size: 0.9em; }
 
-header h2 {
-  font-weight: 400;
-  margin-bottom: 0.5em;
-}
+section { padding: 40px 0; }
+section h3 { font-size: 1.5em; border-bottom: 3px solid var(--primary-color); display: inline-block; margin-bottom: 15px; }
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s, transform 0.8s; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
 
-header p {
-  font-weight: 300;
-  max-width: 600px;
-  margin: 0 auto 1.5em;
-}
+.skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+.skill-grid li { background: var(--light-color); padding: 8px; border-radius: 5px; font-weight: 500; list-style: none; text-align: center; }
 
-.btn {
-  background: white;
-  color: var(--primary-color);
-  padding: 10px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
+.job { margin-bottom: 20px; }
+.job h4 { margin-bottom: 5px; }
+.job p em { font-style: italic; color: #666; }
+.job ul { margin-left: 20px; }
 
-.btn:hover {
-  background: #e9e9e9;
-}
-
-/* ===== Sections ===== */
-section {
-  padding: 60px 0;
-}
-
-section h3 {
-  font-size: 1.6em;
-  border-bottom: 3px solid var(--primary-color);
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
-/* ===== About ===== */
-#about p {
-  max-width: 700px;
-  margin: auto;
-  text-align: center;
-  font-weight: 300;
-}
-
-/* ===== Download Button ===== */
 .download-btn {
   margin-top: 15px;
   padding: 10px 20px;
@@ -91,299 +50,33 @@ section h3 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
 }
+.download-btn:hover { background-color: #005fa3; }
 
-.download-btn:hover {
-  background-color: #005fa3;
-}
+.navbar { width: 100%; background-color: #333; position: fixed; top: 0; z-index: 100; padding: 15px 0; }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+.nav-links a { color: white; text-decoration: none; }
+.menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
 
-/* ===== Skills ===== */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.skill {
-  background: var(--light-color);
-  padding: 10px;
-  text-align: center;
-  border-radius: 8px;
-  font-weight: 500;
-}
-
-/* ===== Experience ===== */
-.job {
-  margin-bottom: 30px;
-}
-
-.job h4 {
-  margin-bottom: 5px;
-}
-
-.job .date {
-  font-style: italic;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-.job ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-/* ===== Projects ===== */
-.project-list {
-  display: grid;
-  gap: 20px;
-}
-
-.project h4 a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-.project h4 a:hover {
-  text-decoration: underline;
-}
-
-.project p {
-  font-weight: 300;
-}
-
-/* ===== Contact ===== */
-#contact {
-  background: var(--light-color);
-  text-align: center;
-}
-
-.socials {
-  margin-top: 15px;
-}
-
-.socials a {
-  margin: 0 10px;
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.socials a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Footer ===== */
-footer {
-  background: var(--dark-color);
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9em;
-}
-
-/* ===== Fade-In Animation ==== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===== Navbar Styles ===== */
-.navbar {
-  width: 100%;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  padding: 15px 0;
-  box-sizing: border-box;
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 25px;
-}
-
-.logo {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #4caf50;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* ===== Mobile Styles ===== */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #333;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
-
-/* =======================
-   PRINT-FRIENDLY RESUME
-   ======================= */
 @media print {
-
-  /* Hide unnecessary UI */
-  .navbar,
-  .download-btn,
-  footer {
-    display: none !important;
-  }
-
-  /* Resume body setup */
-  body {
-    background: #fff !important;
-    color: #000 !important;
-    font-family: "Helvetica", "Arial", sans-serif;
+  body { background: #fff; color: #000; }
+  .navbar, .download-btn, footer { display: none !important; }
+  #resume-content {
+    width: 7.5in;
+    max-width: 7.5in;
+    margin: 0 auto;
+    padding: 0.5in;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 11pt;
-    margin: 0;
-    padding: 0;
+    color: #000;
   }
-
-  /* Keep everything centered on page */
-  #resume-content,
-  body > * {
-    width: 7.5in !important;
-    margin: 0 auto !important;
-    padding: 0.5in 0.75in !important;
-    box-sizing: border-box;
-    background: #fff !important;
-  }
-
-  /* Simplify spacing and colors */
-  header {
-    background: none !important;
-    color: #000 !important;
-    text-align: center;
-    padding: 0;
-    border-bottom: 2px solid #000;
-    margin-bottom: 0.3in;
-  }
-
-  header h1 {
-    font-size: 18pt;
-    margin: 0;
-  }
-
-  header h2 {
-    font-size: 12pt;
-    font-weight: 400;
-    margin: 4px 0 0;
-  }
-
-  section {
-    padding: 0;
-    margin-bottom: 0.35in;
-    page-break-inside: avoid;
-  }
-
-  h3 {
-    font-size: 12pt;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #000;
-    padding-bottom: 2px;
-    margin-bottom: 0.15in;
-  }
-
-  h4 {
-    font-size: 11pt;
-    margin-bottom: 0.05in;
-  }
-
-  p, li {
-    font-size: 10.5pt;
-    line-height: 1.4;
-    margin: 0 0 4px;
-  }
-
-  ul {
-    margin: 0 0 0.15in 1.2em;
-    padding: 0;
-  }
-
-  .fade-in {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  /* Page control */
-  #experience, #education {
-    page-break-before: auto;
-  }
-
-  /* Remove background colors from skills or projects */
-  .skill {
-    background: none !important;
-    border: none !important;
-    text-align: left;
-    padding: 0;
-  }
+  h1 { font-size: 20pt; margin-bottom: 0.1in; }
+  h2 { font-size: 14pt; margin-bottom: 0.2in; }
+  h3 { font-size: 12pt; margin-top: 0.25in; border: none; }
+  h4 { font-size: 11pt; margin-bottom: 0.05in; }
+  p, li { font-size: 10pt; line-height: 1.3; margin-bottom: 0.05in; }
+  ul { padding-left: 1em; }
+  section { page-break-inside: avoid; }
 }
 
-/* Keep resume visible when generating PDF */
-#resume-content {
-  overflow: visible !important;
-  position: relative !important;
-  max-height: none !important;
-  display: block !important;
-}
-
-body, html {
-  overflow: visible;
-  height: auto;
-}
