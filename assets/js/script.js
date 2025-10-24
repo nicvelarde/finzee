@@ -58,6 +58,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+// ===== Load Projects from JSON =====
+  fetch("assets/data/projects.json")
+    .then(response => response.json())
+    .then(projects => {
+      const container = document.getElementById("project-list");
+      if (!container) return;
+
+      const projectCards = projects.map(p => `
+        <div class="project-card fade-in">
+          <h4>${p.title}</h4>
+          <p>${p.description}</p>
+          ${p.link ? `<a href="${p.link}" target="_blank" class="project-link">View Project</a>` : ""}
+        </div>
+      `).join("");
+
+      container.innerHTML = projectCards;
+    })
+    .catch(err => console.error("Error loading projects:", err));
+
 
 });
 
