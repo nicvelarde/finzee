@@ -74,3 +74,64 @@ section h3 { font-size: 1.5em; border-bottom: 3px solid var(--primary-color); di
   .menu-toggle { display: block; }
 }
 
+/* ===== Animations (fade-in) ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Smooth scrolling ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Dark Mode ===== */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .navbar {
+  background-color: #111;
+}
+
+body.dark-mode .nav-links a {
+  color: #eee;
+}
+
+body.dark-mode .skill-grid li {
+  background: #2a2a2a;
+}
+
+body.dark-mode .download-btn {
+  background-color: #0066cc;
+}
+
+body.dark-mode .download-btn:hover {
+  background-color: #004d99;
+}
+
+/* ===== Theme Toggle Button ===== */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+

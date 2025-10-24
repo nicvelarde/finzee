@@ -17,5 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
   if (toggleButton && navLinks) {
     toggleButton.addEventListener('click', () => navLinks.classList.toggle('show'));
   }
+
+  // ===== Dark Mode Toggle =====
+  const themeToggle = document.getElementById('dark-mode-toggle');
+
+  // Load saved theme from localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeToggle.textContent = '☀️';
+  }
+
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    themeToggle.textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+
 });
 
