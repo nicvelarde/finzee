@@ -1,0 +1,13 @@
+[
+    {
+        "title": "Initiative Tracker",
+        "description": "(Under Contruction) A web app allowing game masters and players to input and track initiative order during D&D sessions.",
+        "link": "https://github.com/NicholasVelarde/initiative-tracker"
+    },
+
+    {
+        "title": "Portfolio Website",
+        "description": "This very résumé site, built with HTML, CSS, and JavaScript — soon to include Python automation.",
+        "link": "https://nicholasvelarde.github.io/"
+    }
+]
